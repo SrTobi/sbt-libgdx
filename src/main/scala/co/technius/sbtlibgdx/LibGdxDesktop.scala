@@ -23,7 +23,7 @@ object LibGdxDesktop extends AutoPlugin {
       gdxDependency("gdx-backend-lwjgl").value,
       desktopDependency("gdx-platform").value
     ),
-    mappings in Universal <++= assetMappingsTask
+    mappings in Universal ++= Seq(assetMappingsTask)
   )
 
   lazy val assetMappingsTask = Def.task {
